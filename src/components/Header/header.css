@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+
+.header{
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #008ecc;
+   
+    color: white;
+} 
+a{
+    color: white;
+    text-decoration: none;
+}
+ul{
+    font-size: x-large;
+    display: flex;
+    gap: 10em;
+    list-style: none;
+}
+
+.search input{
+    padding: 15px;
+    
+    width: 350px;
+    /* height: 25px; */
+    /* border: 1px solid white; */
+    border-radius: 20px;
+
+}
+.header2{
+    margin-left: 20px;
+    padding: 10px;
+    justify-content: space-between;
+}
+#groceri{
+    /* display: grid;
+    grid-template-rows: repeat(2, 1fr); */
+
+}
