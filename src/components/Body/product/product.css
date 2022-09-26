@@ -5,9 +5,9 @@ body{
 .prod{
     border: 2px solid black;
     
-    /* display: grid; */
-    /* grid-template-columns: repeat(2, 1fr); */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 .prod :hover{
-    background-color: red;
+    /* background-color: red; */
 }

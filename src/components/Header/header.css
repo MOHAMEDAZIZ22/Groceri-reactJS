@@ -42,10 +42,6 @@ ul{
 .header2{
     margin-left: 20px;
     padding: 10px;
+    gap: 10em;
     justify-content: space-between;
-}
-#groceri{
-    /* display: grid;
-    grid-template-rows: repeat(2, 1fr); */
-
 }

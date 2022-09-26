@@ -21,8 +21,9 @@
 // }
 // export default Product;
 
-import React, { useState} from 'react'
+import React, { useState} from 'react';
 import './product.css'
+
 
 const Product = ({name,price,offer}) => {
     const [itemstate,itemsetter]=useState(price)
@@ -35,6 +36,7 @@ const Product = ({name,price,offer}) => {
       <div>{name}</div>
       <div>{itemstate}</div>
       <div>{offer}</div>
+      
       <button onClick={handleoffer}>Apply offer</button>
       <div>
       <button>🛒 </button>
