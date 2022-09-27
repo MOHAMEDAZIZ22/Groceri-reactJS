@@ -1,13 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     background-color: rgb(198, 197, 197);
-    /* display: flex; */
+    display: flex;
 }
 .prod{
     border: 2px solid black;
     
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 1fr); */
 }
-.prod :hover{
-    /* background-color: red; */
-}
+/* .prod :hover{
+    background-color: red;
+} */

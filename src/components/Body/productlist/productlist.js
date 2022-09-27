@@ -1,20 +1,5 @@
-// import './productlist.css';
-// import React from 'react';
-// import  Product  from './components/product/product';
-// function Productlist ({newproduct}){  
-//     return (
-//         <div>
-//             {newproduct.map((productmap)=>{
-//                return <Product key={productmap.id} name={productmap.name} price={productmap.price} offer={productmap.offer}/>
-//             })}
-//         </div>
-//       )
-// }
-// export default Productlist;
-
-
 import React from 'react'
-import Product from '../product/product'
+import Product from '../Product/Product'
 
 
 const ProductList = ({itemMap}) => {

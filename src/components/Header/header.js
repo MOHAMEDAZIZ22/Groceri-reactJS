@@ -1,5 +1,6 @@
 import React from 'react';
 import './header.css'
+import { ImCart } from 'react-icons/im'
 const Header = () => {
     return (
         <div className="head">
@@ -9,7 +10,7 @@ const Header = () => {
                     <input type="text" placeholder='search essential grocery and more...'></input>
 
                     <div className='header2'>
-                       
+
                         <select name="grcer" id="groceri">
                             <option value="">Groceries</option>
                             <option value="1">Dairy & Bakery</option>
@@ -24,22 +25,22 @@ const Header = () => {
 
                         <select name="fruits" id="pre fruits">
                             <option value="">Premium Fruits</option>
-                            <option value="1">avacado</option>
+                            <option value="1">Avacado</option>
                             <option value="2">Apple</option>
-                            <option value="3">orange</option>
-                            <option value="4">bannana</option>
+                            <option value="3">Orange</option>
+                            <option value="4">Bannana</option>
                             <option value="5">Mango</option>
-                            <option value="6">pomogranade</option>
+                            <option value="6">Pomogranade</option>
                         </select>
 
                         <select name="applinc" id="home applience">
                             <option value="">Home & Kitchen</option>
-                            <option value="1">avacado</option>
-                            <option value="2">Apple</option>
-                            <option value="3">orange</option>
-                            <option value="4">bannana</option>
-                            <option value="5">Mango</option>
-                            <option value="6">pomogranade</option>
+                            <option value="1">Dining</option>
+                            <option value="2">Furniture</option>
+                            <option value="3">Decore</option>
+                            <option value="4">Bathroom & Laundry</option>
+                            <option value="5">Home Appliances</option>
+                            <option value="6">Cleaning </option>
                         </select>
 
                         <select name="fas" id="fashion">
@@ -72,14 +73,13 @@ const Header = () => {
                             <option value="6">Personal Care</option>
                             <option value="7">Make up</option>
                         </select>
+
                     </div>
-
                 </div>
-
                 <div>
                     <ul>
                         <li><a href='#'>Login / Signup</a></li>
-                        <li><a href='#'>🛒 Cart </a></li>
+                        <li><a href='#'><ImCart></ImCart> Cart </a></li>
                     </ul>
                 </div>
             </header>
