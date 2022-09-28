@@ -1,6 +1,11 @@
-.menu{
+
+.menu{    
     display: flex;
     justify-content: space-between;
     padding-left: 80px;
     padding-right: 80px;
+}
+
+.bev:hover{
+    transform: scale(1.2);
 }

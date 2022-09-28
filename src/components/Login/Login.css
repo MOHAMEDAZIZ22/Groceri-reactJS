@@ -1,0 +1,45 @@
+.logincontain {
+    background-color: rgb(48, 46, 46);
+    border: 5px solid blue;
+    border-radius: 30px;
+    margin: auto;
+    height: 500px;
+    width: 600px;
+    /* margin: 30px; */
+}
+.login {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 300px;
+    right: 650px;
+    width: 300px;
+    /* margin: 30px; */
+}
+
+.login input {
+
+    border: 3px solid blue;
+    border-radius: 20px;
+    padding-right: 200px;
+    margin-right: 200px;
+    /* position: relative;
+    left: 200px;
+    width: 300px; */
+    /* height: 20px; */
+    margin: 7px;
+}
+
+.sub_btn {
+    border: 5px solid blue;
+    /* position: relative;
+    left: 209px;
+    width: 300px; */
+}
+.icon{
+    position: absolute;
+    /* top: 10px; */
+    bottom: 150px;
+    left: 110px;
+
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import './header.css'
-import { ImCart } from 'react-icons/im'
+import { FaShippingFast } from 'react-icons/fa'
 const Header = () => {
     return (
         <div className="head">
@@ -79,7 +79,7 @@ const Header = () => {
                 <div>
                     <ul>
                         <li><a href='#'>Login / Signup</a></li>
-                        <li><a href='#'><ImCart></ImCart> Cart </a></li>
+                        <li><a href='#'><FaShippingFast size={30}></FaShippingFast> Cart </a></li>
                     </ul>
                 </div>
             </header>

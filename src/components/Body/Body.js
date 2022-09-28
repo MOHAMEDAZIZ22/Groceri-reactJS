@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react'
-import ProductList from './Productlist/productlist'
+import ProductList from './Product/Productlist/productlist'
+// import ProductList from './Productlist/productlist'
 
 const Body = () => {
     const [itemsState, itemSetter] = useState([])
