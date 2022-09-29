@@ -27,7 +27,6 @@ const Body = () => {
     return (
         <div>
             <ProductList itemMap={itemsState}></ProductList>
-            <ProductList itemMap={itemsState}></ProductList>
 
         </div>
     )

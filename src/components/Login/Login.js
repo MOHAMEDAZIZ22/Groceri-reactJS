@@ -27,7 +27,7 @@ const Login = () => {
     <div className="logincontain">
       <div className="login" onSubmit={(e) => handleSubmit(e)}>
         <form className="login_form">
-        {/* <p className="icon"><CgProfile fontSize={130} color='#008ecc' /></p> */}
+        <p className="icon"><CgProfile fontSize={130} color='#008ecc' /></p>
           <input type='name' placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} />
           <input type='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} required />
           <input type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} required />

@@ -5,7 +5,8 @@ const Header = () => {
     return (
         <div className="head">
             <header className="header">
-                <h1>JIO mart</h1>
+                
+                <a href='/home'><h1>JIO mart</h1></a>
                 <div className='search'>
                     <input type="text" placeholder='search essential grocery and more...'></input>
 
@@ -78,8 +79,8 @@ const Header = () => {
                 </div>
                 <div>
                     <ul>
-                        <li><a href='#'>Login / Signup</a></li>
-                        <li><a href='#'><FaShippingFast size={30}></FaShippingFast> Cart </a></li>
+                        <li><a href='/Logsign'>Login / Signup</a></li>
+                        <li><a href='/cart'><FaShippingFast size={30}></FaShippingFast> Cart </a></li>
                     </ul>
                 </div>
             </header>
