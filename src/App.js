@@ -1,47 +1,74 @@
-import './App.css';
-import Header from './components/header'
-import Body from './components/body'
-import Slider from './components/Pages/Sliderimages';
-import Productdeals from './components/Productdeals'
-import { Routes, Route } from 'react-router-dom'
-// import Loginsignin from './Components/Pages/Loginsignin';
+import Header from './components/Header/header';
+import Menus from './components/menus/menu';
+import Login from './components/login/login';
+import Slider from './components/Header/slideimages';
+import { useSelector} from 'react-redux';
+import { selectUser } from './features/userslice';
+import { Routes, Route, Link} from "react-router-dom";
+import React,{useEffect, useState } from 'react';
+import AddContext from './context';
+import Fruitslist from './components/menus/fruites/fruitelist';
+import Cartholder from  './components/addcart/cartholder';
+import TopDeals from './components/topdeals/topdeals';
 
-import Cookiefetch from './components/Cookies/Cookiefetch'
-import Fashionfetch from './components/Fashion/Fashionfetch'
-import Audiofetch from './components/Audio/Audiofetch'
-import Description from './components/Description/Description'
-import Descriptionfashion from './components/Description/Descriptionfashion'
-import Descriptioncook from './components/Description/Descriptioncook'
-import Descriptionheadset from './components/Description/Descriptionheadset'
-import Loginsignin from './components/Pages/Loginsignin'
-import Logout from './components/Pages/Logout'
-import { useSelector } from 'react-redux';
-import { selectUser } from './Feauters/Userslice';
 
 function App() {
-  const user=useSelector(selectUser)
+  const[cart,setCart]=useState([]);
+  const[qty,setQty]=useState(0);
+    const addCart=(item)=>{
+      
+    setCart((preitems)=>{
+        return[item,...preitems]
+      })
+    }
+
+    const [veg, setVeg] = useState([]);
+    const [fru, setFru] = useState([]);
+    const [gro, setGro] = useState([]);
+    const [total, setTotal] = useState([]);
+
+
+    useEffect(() => {
+        
+        fetch("https://6315e15733e540a6d386e913.mockapi.io/vegetables").then(res=>res.json())
+        .then(dat => setVeg(dat))
+
+        fetch("https://6315e15733e540a6d386e913.mockapi.io/groceries").then(res=>res.json())
+        .then(dat => setGro(dat))
+
+        fetch("https://6315e15733e540a6d386e913.mockapi.io/fruits").then(res=>res.json())
+        .then(dat => setFru(dat))
+    }, [])
+    
+
+    useEffect(()=>{
+      setTotal(()=>{
+        return [...veg,...fru,...gro];
+      })
+    },[veg,fru,gro])
+
+
+  const user=useSelector(selectUser);
+  useEffect(()=>{
+    console.log(user.loggedIn);
+  },[user])
   return (
     <div className="App">
-      <Header></Header>
+      <AddContext.Provider value={{addCart,cart,setQty,qty,total}}>
+      <Header/>
       <Slider></Slider>
-      {/* {user ? <Logout></Logout>:<Loginsignin></Loginsignin>} */}
-      <Productdeals></Productdeals>
       <Routes>
-        <Route path='/loginsignin' element={user ? <Logout></Logout>:<Loginsignin></Loginsignin>}></Route>
-        <Route path='/fruitsandveg' element={<Body></Body>}></Route>
-        <Route path='/Snacks' element={<Cookiefetch></Cookiefetch>}></Route>
-        <Route path='/beverage' element={<Fashionfetch></Fashionfetch>}></Route>
-        <Route path='/Fashion' element={<Audiofetch></Audiofetch>}></Route>
-        <Route path='des/:id' element={<Description></Description>}></Route>
-        <Route path='desfas/:id' element={<Descriptionfashion></Descriptionfashion>}></Route>
-        <Route path='descook/:id' element={<Descriptioncook></Descriptioncook>}></Route>
-        <Route path='desaudio/:id' element={<Descriptionheadset></Descriptionheadset>}></Route>
+        <Route  index element={<Menus/>}></Route>
+        <Route path='/item/:lists' element={<Fruitslist/>}></Route>
+        <Route path='addcart' element={<Cartholder/>}></Route>
+        <Route path='login' element={<Login></Login>}></Route>
+        <Route path='t' element={<TopDeals></TopDeals>}></Route>
       </Routes>
-
-      {/* <Body></Body>  */}
-
+      {/* <Menus/> */}
+      
+      </AddContext.Provider>
     </div>
-
   );
 }
+
 export default App;

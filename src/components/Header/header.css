@@ -1,0 +1,44 @@
+.header{
+    background-color: #008ECC;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+h1{
+    color: white;
+}
+.head_first{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 700;
+    
+}
+.head_first > span{
+    color: #def2f1;
+}
+.head_scnd{
+    display: flex;
+    align-items: center;
+    background-color: #def2f1;
+    border-radius: 3px;
+}
+.head_scnd > input{
+    border: none;
+    outline: none;
+    width: 36vw;
+    padding: 10px 15px;
+    border-radius: 3px;
+    /* background-color: #def2f1; */
+}
+.head_third >button {
+    border: none;
+    outline: none;
+    width: 9vw;
+    /* background-color: ; */
+    /* color: white ; */
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 7px;
+}
