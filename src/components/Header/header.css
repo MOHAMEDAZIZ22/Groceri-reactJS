@@ -7,6 +7,19 @@
 h1{
     color: white;
 }
+.header2{
+    position: absolute;
+    top: 105px;
+    left: 250px;
+    display: flex;
+    justify-content: space-between;
+  }
+.bet{
+    position: absolute;
+    top: 73px;
+    left: 295px;
+
+}
 .head_first{
     display: flex;
     align-items: center;
@@ -18,10 +31,11 @@ h1{
     color: #def2f1;
 }
 .head_scnd{
+    padding: 15px;  
+    width: 550px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
-    background-color: #def2f1;
-    border-radius: 3px;
 }
 .head_scnd > input{
     border: none;

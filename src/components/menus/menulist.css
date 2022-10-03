@@ -2,8 +2,6 @@
     border-radius: 10px;
     border: solid 5px #006CEE ;
     width: 200px;
-    /* background-color: #3aafa9; */
-    /* background-color: #def2f1; */
     height: 250px;
     margin-bottom: 15px;
     box-sizing: border-box;
@@ -11,7 +9,6 @@
 }
 .menulist:hover{
     transform: scale(1.07);
-    /* box-shadow: 5px 10px 18px #def2f1; */
 }
 .menulist div:nth-child(1) img{
     border-radius:10px 10px 10px 10px ;

@@ -10,6 +10,7 @@ import AddContext from './context';
 import Fruitslist from './components/menus/fruites/fruitelist';
 import Cartholder from  './components/addcart/cartholder';
 import TopDeals from './components/topdeals/topdeals';
+// import Search from './components/Search/Searchbar.js';
 
 
 function App() {
@@ -25,27 +26,32 @@ function App() {
     const [veg, setVeg] = useState([]);
     const [fru, setFru] = useState([]);
     const [gro, setGro] = useState([]);
+    const[fash,setFash]=useState([]);
     const [total, setTotal] = useState([]);
 
 
     useEffect(() => {
         
-        fetch("https://6315e15733e540a6d386e913.mockapi.io/vegetables").then(res=>res.json())
+        fetch("https://63159b6c33e540a6d37fdf21.mockapi.io/vegtables").then(res=>res.json())
         .then(dat => setVeg(dat))
 
-        fetch("https://6315e15733e540a6d386e913.mockapi.io/groceries").then(res=>res.json())
+        fetch("https://63159b6c33e540a6d37fdf21.mockapi.io/snacks").then(res=>res.json())
         .then(dat => setGro(dat))
 
-        fetch("https://6315e15733e540a6d386e913.mockapi.io/fruits").then(res=>res.json())
+        fetch("https://63159b6c33e540a6d37fdf21.mockapi.io/fruit").then(res=>res.json())
         .then(dat => setFru(dat))
+
+        fetch("https://63159b6c33e540a6d37fdf21.mockapi.io/fashion").then(res=>res.json())
+        .then(dat => setFash(dat))
+
     }, [])
     
 
     useEffect(()=>{
       setTotal(()=>{
-        return [...veg,...fru,...gro];
+        return [...veg,...fru,...gro,...fash];
       })
-    },[veg,fru,gro])
+    },[veg,fru,gro,fash])
 
 
   const user=useSelector(selectUser);
@@ -57,6 +63,7 @@ function App() {
       <AddContext.Provider value={{addCart,cart,setQty,qty,total}}>
       <Header/>
       <Slider></Slider>
+      {/* <Search></Search> */}
       <Routes>
         <Route  index element={<Menus/>}></Route>
         <Route path='/item/:lists' element={<Fruitslist/>}></Route>

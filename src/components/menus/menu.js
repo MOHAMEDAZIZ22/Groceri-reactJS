@@ -6,27 +6,31 @@ import grocery from '../images/grocery.jpg';
 import snack from '../images/snack.jpg';
 import fash from '../images/fash.jpg';
 import TopDeals from '../topdeals/topdeals';
+import FruitsItems from './fruites/fruites';
 
 function Menus() {
     const menus = [
         {
             id: 1,
-            name: 'Fruits & Vegitable',
+            name: 'vegtables',
+            
             images: fruits
         },
         {
             id: 2,
-            name: 'Beverage',
+            name: 'snacks',
+            
             images: Bev
         },
         {
             id: 3,
-            name: "groceries",
+            name: "fruit",
+            
             images: grocery
         },
         {
             id: 4,
-            name: "Fashion",
+            name: "fashion",
             images: fash
 
         },

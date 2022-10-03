@@ -9,8 +9,7 @@ function Fruitslist() {
     const fetchlist=useParams();
     
     useEffect(() => {
-        fetch('/'+fetchlist.lists).then((response) => {
-            // console.log(response.json());
+        fetch('https://63159b6c33e540a6d37fdf21.mockapi.io/'+fetchlist.lists).then((response) => {
             if (response.ok) {
                 return response.json()
             }
