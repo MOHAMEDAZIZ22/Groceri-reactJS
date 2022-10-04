@@ -1,7 +1,7 @@
 .mcontaine{
     width: 90%;
     margin: auto;
-    border: solid 2px black;
+    /* border: solid 5px black; */
 }
 .mWrapper{
     margin: 2% auto 0px auto;

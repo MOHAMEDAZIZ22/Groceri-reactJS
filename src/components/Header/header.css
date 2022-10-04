@@ -42,8 +42,7 @@ h1{
     outline: none;
     width: 36vw;
     padding: 10px 15px;
-    border-radius: 3px;
-    /* background-color: #def2f1; */
+    border-radius: 35px;
 }
 .head_third >button {
     border: none;

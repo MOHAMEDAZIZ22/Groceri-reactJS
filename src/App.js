@@ -9,7 +9,7 @@ import React,{useEffect, useState } from 'react';
 import AddContext from './context';
 import Fruitslist from './components/menus/fruites/fruitelist';
 import Cartholder from  './components/addcart/cartholder';
-import TopDeals from './components/topdeals/topdeals';
+import TopDeals from './components/Topdeals/topdeals'
 // import Search from './components/Search/Searchbar.js';
 
 

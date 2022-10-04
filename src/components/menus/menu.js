@@ -5,8 +5,7 @@ import Bev from '../images/Bev.jpg'
 import grocery from '../images/grocery.jpg';
 import snack from '../images/snack.jpg';
 import fash from '../images/fash.jpg';
-import TopDeals from '../topdeals/topdeals';
-import FruitsItems from './fruites/fruites';
+import TopDeals from '../Topdeals/topdeals';
 
 function Menus() {
     const menus = [
